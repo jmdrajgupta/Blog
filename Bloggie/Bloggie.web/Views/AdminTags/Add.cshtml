@@ -1,0 +1,36 @@
+﻿@model Bloggie.web.Models.ViewModels.AddTagRequest // Specifies that the view uses the AddTagRequest ViewModel
+
+@{
+    // Razor code block - currently empty, used for server-side logic if needed
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Add New Tag - Admin Functionality</h1> <!-- Page heading for the "Add New Tag" form -->
+    </div>
+</div>
+
+<div class="container py-5">
+    <!-- HTML form for submitting new tag data to the server -->
+    <form method="post">
+        <div class="mb-3">
+            <!-- Label for the "Name" input field -->
+            <label class="form-label">Name</label>
+            <!-- Text input field bound to the "Name" property of the AddTagRequest ViewModel -->
+            <input type="text" class="form-control" id="name" asp-for="Name" />
+        </div>
+
+        <div class="mb-3">
+            <!-- Label for the "Display Name" input field -->
+            <label class="form-label">Display Name</label>
+            <!-- Text input field bound to the "DisplayName" property of the AddTagRequest ViewModel -->
+            <input type="text" class="form-control" id="displayName" asp-for="DisplayName" />
+        </div>
+
+        <div class="mb-3">
+            <!-- Submit button to send the form data to the server -->
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+</div>
+
